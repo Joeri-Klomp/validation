@@ -16,6 +16,7 @@ public class PrijsValidator implements ConstraintValidator<CustomPrijs, BigDecim
     //Returns true als de waarde een correcte waarde bevat
     public boolean isValid(BigDecimal value, ConstraintValidatorContext context) {
         if (value == null) {
+            //als de waarde null is, moet een extra annotation gebruiker, dus moet true returnen hier
             return true;
         }
         if (value.compareTo(BigDecimal.ZERO) < 0) {
